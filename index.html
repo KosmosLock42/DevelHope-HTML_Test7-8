@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lezione HTML</title>
+</head>
+<header>
+    <h1>Form di Registrazione</h1>
+</header>
+
+<body>
+    <style>label {margin: 10% 3px;}</style>
+
+    <form action="database.php" method="POST">
+        <label for="email">Email</label>
+	    <input type="email" name="email" id="email" required>
+    <br>
+	    <label for="password">Password</label>
+	    <input type="password" name="password" id="password" required>
+    <br>
+		<label for="name">Nome</label>
+		<input type="text" name="name" id="name" required>
+
+		<label for="lname">Cognome</label>
+		<input type="text" name="lname" id="lname" required>
+    <br>
+        <label for="bday">Data di Nascita</label>
+        <input type="date" name="bday" id="bday" required>
+        <br>
+        <label for="phone">Numero di telefono</label>
+        <input type="tel" name="phone" id="phone" required>
+        <br>
+        <label for="subplan">Scegli un abbonamento</label>
+        <select name="subplan" id="subplan" required>
+            <optgroup label="Piani Gratis">
+                <option value="free">Free</option>
+            </optgroup>
+            <optgroup label="Piani a Pagamento">
+                <option value="3">2,99€ al mese</option>
+                <option value="10">9,99€ al mese</option>
+                <option value="20">19,99€ al mese</option>
+            </optgroup>
+        </select>
+        <br>
+        <label for="proadv">Desidero i vantaggi PRO:</label>
+        <input type="checkbox" name="proadv" id="proadv">
+        <div class="ccinfo">
+            <h3>Carta di Credito</h3>
+        <label for="ccnumber">Numero carta</label>
+        <input type="text" name="ccnumber" id="ccnumber" minlength="16" maxlength="16" pattern="[0-9]{16}" required>
+        <br>
+        <label for="cvc">CVC</label>
+        <input type="text" name="cvc" id="cvc" minlength="3" maxlength="3" style="width: 25px;" pattern="[0-9]{3}" required>
+        <label for="ccexp">Scadenza</label>
+        <input type="date" required>
+        <br>
+        <label for="billadd">Indirizzo di fatturazione</label>
+        <input type="text" name="billadd" id="billadd" required>
+        <br>
+        <input type="submit" value="Iscriviti">
+
+
+    </form>
+
+
+<!-- Per qualche motivo non riesco a far funzionare i pattern, ho aggiunto un filo di stile per alcuni campi.
+La selezione a tendina avendo una selezione di default non risulta "required" sul browser.-->
+
+    
+</body>
+</html>
